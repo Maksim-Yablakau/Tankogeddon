@@ -12,6 +12,10 @@ AProjectile::AProjectile()
 	SphereCollision = CreateDefaultSubobject<USphereComponent>(TEXT("SphereCollision"));
 	SphereCollision->SetupAttachment(SceneComp);
 	SphereCollision->OnComponentBeginOverlap.AddDynamic(this, &AProjectile::OnMeshOverlapBegin);
+<<<<<<< HEAD
+	SphereCollision->SetCollisionObjectType(ECollisionChannel::ECC_GameTraceChannel1);
+=======
+>>>>>>> Tankogeddon
 
 	ProjectileMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ProjectileMesh"));
 	ProjectileMesh->SetupAttachment(SphereCollision);
